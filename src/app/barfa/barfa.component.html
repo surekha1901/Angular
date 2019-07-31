@@ -1,0 +1,54 @@
+<!-- <p>
+  barfa works!
+</p>
+<hr>
+<app-server class="c1"></app-server> 
+<app-server class="c1"></app-server>  -->
+<div class="col-md-6">
+    <label>Server Name</label>
+    <input type="text" class="form-control" (input)="onupdateservername($event)">
+    <!-- <p>{{servername}}</p> -->
+</div>
+<br>
+<div class="col-md-6">
+    <label>Server Name</label>
+    <input type="text" class="form-control" [(ngModel)]="servername">
+    <!-- <p>{{servername}}</p> -->
+</div>
+<br>
+
+
+<div class="col-md-6">
+    <button  class="btn btn-primary" [disabled]="!allowNewServer" (click)="Oncreateserver()">Add Server</button>
+
+    
+    <p [innerText]="allowNewServer">{{allowNewServer}}</p>
+          <p>{{serverreationStatus}}</p>
+</div>
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>{{username}}</p>
+<button class="btn btn-primary" [disabled]="username===''" (click)="username=''" >reset user</button>
+
+
+<div class="col-md-6">
+    <label>Server Name</label>
+    <input type="text" class="form-control" [(ngModel)]="servername">
+    <!-- <p>{{servername}}</p> -->
+</div>
+<br>
+<input type="text" class="form-control" [(ngModel)]="servername">
+
+
+    <button  class="btn btn-primary" [disabled]="!allowNewServer" (click)="Oncreateserver()">Add Server</button>
+
+    
+    <p [innerText]="allowNewServer">{{allowNewServer}}</p>
+          <p *ngIf="sercreate">Server was Created , Server was created namr! {{serverreationStatus}}</p>
+          <h3>ng tamplate</h3>
+          <p *ngIf="sercreate; else noserver">Server was Created , {{serverreationStatus}}</p>
+          <ng-template #noserver>
+            <p>no server was created!</p>
+          </ng-template><br>
+           <app-server *ngFor ="let server1 of servers"></app-server> 
+
+

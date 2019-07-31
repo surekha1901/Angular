@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to hiii {{ title }}!
+  </h1>
+ 
+</div>
+
+<div class="container">
+  <div class="row">
+  <div class="col-xs-12">
+      <h3>i am in the AppComponent </h3>
+      <hr>
+         <app-server></app-server>  
+        
+         <!-- <div app-barfa></div>  -->
+         <div class="app-barfa"></div> 
+
+      
+      <div><input  type="text" placeholder="name" [(ngModel)]="name"></div>
+      <p>{{name}}</p>
+      <!-- <button  class="btn btn-primary"  (click)="Oncreateserver()">Add Server</button>
+      <p [innerText]="allowNewServer">{{allowNewServer}}</p>
+      <p>{{serverreationStatus}}</p> -->
+
+       <app-barfa></app-barfa>
+      <app-server></app-server>  
+
+  </div>
+  </div>
+</div>
+
+
+
+
