@@ -1,13 +1,14 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { template } from '@angular/core/src/render3';
+import { templateJitUrl } from '@angular/compiler';
 
 import { from } from 'rxjs';
 
 @Component({
 	selector: 'app-server',
 	templateUrl:'./server.component.html',
-	stylesUrl:[`.online
-	{color;white;}`]
+	styleUrls: ['./server.component.css']
 })
 export class ServerComponent{
 serverid: number=10;
